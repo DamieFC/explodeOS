@@ -3,7 +3,7 @@
 #include <stdint.h>
  
 /* Check if the compiler thinks you are targeting the wrong operating system. */
-#if defined(__linux__)
+#ifdef __linux__
 #error "You are not using a cross-compiler, you will most certainly run into trouble"
 #endif
  
@@ -111,4 +111,5 @@ void kernel_main(void)
  
 	/* Newline support is left as an exercise. */
 	terminal_writestring("Hello, kernel World!\n");
+	terminal_writestring("This is from OSDev.org with modifications from DamieFC on Github!\n");
 }
