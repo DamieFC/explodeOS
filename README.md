@@ -7,9 +7,7 @@ An OS based on the OSDev bare bones C kernel.
 - [ ] Memory manager (PMM and VMM)
 - [ ] Some sort of UI
 - [ ] 64-bit x86
-- [ ] 64-bit ARM/(open)RISC(V)
+- [ ] 32/64-bit ARM/(open)RISC(V)
 - [x] Makefiles
 - [ ] Internet
 - [ ] Updates
-- [ ] GUI
-- [ ] CLI
