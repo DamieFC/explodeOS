@@ -11,3 +11,5 @@ An OS based on the OSDev bare bones C kernel.
 - [x] Makefiles
 - [ ] Internet
 - [ ] Updates
+- [ ] GUI
+- [ ] CLI
