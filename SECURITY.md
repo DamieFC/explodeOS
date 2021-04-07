@@ -7,8 +7,8 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 2021.2  | :yellow_circle:    |
-| 2021.1  | :white_check_mark: |
+| 2021.2  | :white_check_mark: |
+| 2021.1  | :x:                |
 
 Key:
 
