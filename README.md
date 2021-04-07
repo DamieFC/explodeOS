@@ -9,3 +9,5 @@ An OS based on the OSDev bare bones C kernel.
 - [ ] 64-bit x86
 - [ ] 64-bit ARM/(open)RISC(V)
 - [x] Makefiles
+- [ ] Internet
+- [ ] Updates
