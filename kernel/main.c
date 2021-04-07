@@ -110,6 +110,7 @@ void kernel_main(void)
 	terminal_initialize();
  
 	/* Newline support is left as an exercise. */
-	terminal_writestring("Hello, kernel World!\n");
+	terminal_writestring("Welcome to explodeOS!\n");
 	terminal_writestring("This is from OSDev.org with modifications from DamieFC on Github!\n");
+	terminal_writestring("If you want to help, go to https://github.com/DamieFC/explodeOS and check it out!");
 }
