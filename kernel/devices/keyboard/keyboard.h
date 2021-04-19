@@ -6,7 +6,7 @@
 
 char keymap[6 /* So far */] = {
     /* Help me pls I don't really get bytes */
-    0x01,0x02,0x03,0x04,0x05, /* OK literally esc 1 2 3 4 */
+    0x01,0x02,0x03,0x04,0x05,0x06,0x07, /* OK literally esc 1 2 3 4 5 6 */
 }
 
 void keyboard_init();
