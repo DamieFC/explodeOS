@@ -75,7 +75,25 @@ void terminal_putchar(char c) {
 		}
 	}
 }
+
+void terminal_clear_line(size_t y) {
+	size_t x = 0;
+	while (x < VGA_WIDTH) {
+		terminal_putentryat(' ', terminal_color, x, y);
+		x ++;
+	}
+}
  
+void terminal_clearscreen(void) {
+	size_t y = 0;
+	while (y < VGA_HEIGHT) {
+		terminal_clear_line(y);
+		y ++;
+	}
+	terminal_row = 0;
+	terminal_column = 0;
+}
+
 void terminal_write(const char* data, size_t size) {
 	for (size_t i = 0; i < size; i++)
 		terminal_putchar(data[i]);
