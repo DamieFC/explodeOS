@@ -56,24 +56,25 @@ void terminal_delete_last_line() {
 }
  
 void terminal_putchar(char c) {
-	int line;
-	unsigned char uc = c;
- 
-	terminal_putentryat(uc, terminal_color, terminal_column, terminal_row);
-	if (++terminal_column == VGA_WIDTH) {
+	if (terminal_row + 1 == VGA_HEIGHT) {
+		terminal_scroll();
+		terminal_row --;
 		terminal_column = 0;
-		if (++terminal_row == VGA_HEIGHT)
-		{
-			for(line = 1; line <= VGA_HEIGHT - 1; line++)
-			{
-				terminal_scroll(line);
-			}
-			terminal_delete_last_line();
-			terminal_row = VGA_HEIGHT - 1;
+	} 
+
+	
+	if (c == '\n') {
+		terminal_row ++;
+		terminal_column = 0;
+	} else {
+		unsigned char uc = c;
+		terminal_putentryat(uc, terminal_color, terminal_column, terminal_row);
+		if (++terminal_column == VGA_WIDTH) {
+			terminal_column = 0;
+			terminal_row ++;
 		}
 	}
 }
-
 void terminal_clear_line(size_t y) {
 	size_t x = 0;
 	while (x < VGA_WIDTH) {
