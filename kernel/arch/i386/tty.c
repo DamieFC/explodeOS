@@ -38,16 +38,14 @@ void terminal_putentryat(unsigned char c, uint8_t color, size_t x, size_t y) {
 	terminal_buffer[index] = vga_entry(c, color);
 }
  
-void terminal_scroll(int line) {
-	int loop;
-	char c;
- 
-	for(loop = line * (VGA_WIDTH * 2) + 0xB8000; loop < VGA_WIDTH * 2; loop++) {
-		c = *loop;
-		*(loop - (VGA_WIDTH * 2)) = c;
-	}
+void terminal_scroll(){
+    for(int i = 0; (long unsigned int)i < VGA_HEIGHT; i++){
+        for (int m = 0; (long unsigned int)m < VGA_WIDTH; m++){
+            terminal_buffer[i * VGA_WIDTH + m] = terminal_buffer[(i + 1) * VGA_WIDTH + m];
+        }
+    }
 }
- 
+
 void terminal_delete_last_line() {
 	int x, *ptr;
  
