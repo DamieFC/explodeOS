@@ -1,6 +1,6 @@
 # Makefile for kernel
 
-NAME = "2021.2"
+NAME = "2021.3-dev"
 
 DEFAULT_HOST!=../default-host.sh
 HOST?=DEFAULT_HOST
@@ -33,7 +33,7 @@ LIBS:=$(LIBS) $(KERNEL_ARCH_LIBS)
  
 KERNEL_OBJS=\
 $(KERNEL_ARCH_OBJS) \
-kernel/kernel.o \
+kernel/main.o \
  
 OBJS=\
 $(ARCHDIR)/crti.o \
