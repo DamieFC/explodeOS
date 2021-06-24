@@ -11,6 +11,7 @@ An OS based on the OSDev bare bones C kernel.
 - [x] Makefiles
 - [ ] Internet
 - [ ] Updates
+- [ ] Interrupts
 ### Why not get these things from other projects?
 I want to be less of a [Duct von Tape](https://wiki.osdev.org/Duct_von_Tape), so I'm actually trying to learn something instead of gluing together stuff and bringing duct tape to the brink of extinction. Still, please help.
 ## Building
